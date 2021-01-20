@@ -14,9 +14,9 @@ RSpec.describe Task, type: :model do
 
     # タイトルがなければ無効である
     it 'is invalid without title' do
-      task = build(:task, title: "")
-      expect(task).to be_invalid
-      expect(task.errors[:title]).to eq ["can't be blank"]
+      task_without_title = build(:task, title: "")
+      expect(task_without_title).to be_invalid
+      expect(task_without_title.errors[:title]).to eq ["can't be blank"]
     end
 
     # statusがなければ無効である
