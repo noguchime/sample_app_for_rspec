@@ -21,9 +21,9 @@ RSpec.describe Task, type: :model do
 
     # statusがなければ無効である
     it 'is invalid without status' do
-      task = build(:task, status: "")
-      expect(task).to be_invalid
-      expect(task.errors[:status]).to eq ["can't be blank"]
+      task_without_status = build(:task, status: nil)
+      expect(task_without_status).to be_invalid
+      expect(task_without_status.errors[:status]).to eq ["can't be blank"]
     end
 
     # titleが重複していたら無効である
