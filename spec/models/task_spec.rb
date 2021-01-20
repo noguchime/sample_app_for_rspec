@@ -1,8 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Task, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
-
   # バリデーションについてテストするグループ
   describe 'validation' do
     # 全ての属性が有効
