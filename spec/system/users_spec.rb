@@ -1,27 +1,27 @@
 require 'rails_helper'
 
 RSpec.describe "Users", type: :system do
-  before do
-    driven_by(:rack_test)
-  end
+  # before do
+  #   driven_by(:rack_test)
+  # end
 
-  pending "add some scenarios (or delete) #{__FILE__}"
+  # pending "add some scenarios (or delete) #{__FILE__}"
 
   # 教材の例から引用
   describe 'ログイン前' do
     describe 'ユーザー新規登録' do
       # context=>条件分岐の時にテストをグループ化ｓ
       context 'フォームの入力値が正常' do
-        it 'ユーザーの新規作成が成功する' do
-          user = create(:user)
-          expect(user).to be_valid
+        it 'ユーザーの新規作成が成功する' do          
         end
       end
       context 'メールアドレスが未入力' do
         it 'ユーザーの新規作成が失敗する'
+          
       end
       context '登録済のメールアドレスを使用' do
         it 'ユーザーの新規作成が失敗する'
+          
       end
     end
 
