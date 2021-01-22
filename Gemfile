@@ -34,6 +34,7 @@ end
 
 group :test do
   gem 'capybara' # https://github.com/teamcapybara/capybara
+  gem 'webdrivers' # https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

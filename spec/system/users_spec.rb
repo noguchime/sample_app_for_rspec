@@ -10,8 +10,12 @@ RSpec.describe "Users", type: :system do
   # 教材の例から引用
   describe 'ログイン前' do
     describe 'ユーザー新規登録' do
+      # context=>条件分岐の時にテストをグループ化ｓ
       context 'フォームの入力値が正常' do
-        it 'ユーザーの新規作成が成功する'
+        it 'ユーザーの新規作成が成功する' do
+          user = create(:user)
+          expect(user).to be_valid
+        end
       end
       context 'メールアドレスが未入力' do
         it 'ユーザーの新規作成が失敗する'
