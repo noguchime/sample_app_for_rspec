@@ -4,6 +4,7 @@ ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
+# テストスイートに対して Capybara を読み込む
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -64,6 +65,5 @@ RSpec.configure do |config|
 
   # configuration for factorybot
   config.include FactoryBot::Syntax::Methods
-
-  config.include LoginMacros  
+  config.include LoginMacros
 end
